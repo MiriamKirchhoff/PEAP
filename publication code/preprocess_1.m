@@ -7,8 +7,8 @@ end
 
 %% Set paths
 
-path.load = 'C:\Users\Miriam_Kirchhoff\Documents\MATLAB\REFTEP_preprocessing\Phase estimation scripts\data\';
-path.save = 'C:\Users\Miriam_Kirchhoff\Documents\MATLAB\REFTEP_preprocessing\Phase estimation scripts\data\';
+path.load = '';
+path.save = '';
 
 
 %% Set loading options
