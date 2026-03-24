@@ -43,7 +43,7 @@ get_ground_truth_phase_estimates('test', settings)
 % Use first 3 min of resting state data
 
 % 1.: PEAP
-ar_opt_params = train_PEAP(settings);
+ar_opt_params = train_PEAP;
 
 % 2.: Phastimate
 % phastimate_opt_params = train_phastimate;
