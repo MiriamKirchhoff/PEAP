@@ -46,7 +46,7 @@ get_ground_truth_phase_estimates('test', settings)
 ar_opt_params = train_PEAP;
 
 % 2.: Phastimate
-% phastimate_opt_params = train_phastimate;
+phastimate_opt_params = train_phastimate;
 
 % 3.: ETP
 ETP_opt_params = train_ETP(settings);
