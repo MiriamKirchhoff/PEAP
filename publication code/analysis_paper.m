@@ -5,14 +5,13 @@ clear all
 % Script to filter data
 %% Settings
 
-path.load = 'C:\Users\Miriam_Kirchhoff\Documents\MATLAB\REFTEP_preprocessing\Phase estimation scripts\data\';
-path.save = 'C:\Users\Miriam_Kirchhoff\Documents\MATLAB\REFTEP_preprocessing\Phase estimation scripts\Results\';
+path.load = '';
+path.save = '';
 
 
 type = 'test';
 
-% dataset_names = {'LOWERLIMB', 'REFTEP', 'REFSTROKE_ipsi', 'REFSTROKE_contra', 'REFSTROKE_healthy'};
-dataset_names = {'control', 'control', 'Stroke_ipsi', 'Stroke_contra', 'Stroke_control'};
+dataset_names = {'control', 'Stroke_ipsi', 'Stroke_contra', 'Stroke_control'};
 
 plot_paper_only = true;
 
@@ -1080,22 +1079,9 @@ psd_plot = log(psd_all.test((f > 1 & f < 45), :));
 
 nexttile; hold on; grid on
 
-% plot(f_plot, mean(psd_plot,2), 'Color', 'w', 'LineWidth', 2, 'DisplayName', '\bf Test')
-% hold on
 
 plot(f_plot, mean(psd_plot,2), 'Color', colors.cyan, 'LineWidth', 2, 'DisplayName', 'Test')
 
-% Plot per subgroup
-% dataset_plot_names = ["Young control", "Elderly control" "Stroke intact" "Stroke affected"];
-% linestyle_list = ["-", "--", "-.", ":"];
-% hold on
-% idx_dataset = floor(subject_dataset_labels/100);
-% idx_dataset(idx_dataset == 1) = 2;
-% idx_dataset = idx_dataset - 1;
-% for i = 1:4
-%     psd_subplot = psd_plot(:,idx_dataset == i);
-%     plot(f_plot, mean(psd_subplot,2), 'Color', colors.cyan, 'LineWidth', 1, 'DisplayName', dataset_plot_names{i}, 'Linestyle', linestyle_list(i))
-% end
 
 % train set
 filepath1 = [path.load 'ground_truth_' 'train'];
